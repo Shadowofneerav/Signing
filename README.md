@@ -21,7 +21,7 @@ Essentially, my project allows you to “sign” contracts without using any p
 
 The DApp User Interface when running should look like...
 
- (images/UI.png)
+ https://github.com/Shadowofneerav/Signing/blob/master/images/UI.PNG
 
  
 
@@ -40,14 +40,12 @@ git clone
 
 1) ABI in below image
  
- (images/abi.png)
+  https://github.com/Shadowofneerav/Signing/blob/master/images/abi.PNG
 
 
 2) Deployed address in below image.
  
- (images/SmartContractAddress.png)
-
- 
+   https://github.com/Shadowofneerav/Signing/blob/master/images/SmartContractAddress.PNG
 
 -Copy the deployed address and replace in place of smart contract address inside contract.js file.
 
