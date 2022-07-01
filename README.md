@@ -1,6 +1,6 @@
-Sign Contracts on Smart Contracts Without Using Your Private Key
+##Sign Contracts on Smart Contracts Without Using Your Private Key
 
-The problem
+###The problem
 
 Signing contracts the traditional ways requires trust
 So when we sign a contract the traditional way, how do we know that the other party isn’t going to change up the terms on the contract? And how can we guarantee that the other party will not claim they didn't sign? Do we even want to take that risk?
@@ -8,7 +8,7 @@ So when we sign a contract the traditional way, how do we know that the other pa
 The answer is pretty clear: NO
 
 
-The Idea
+###The Idea
 
 Essentially, my project allows you to “sign” contracts without using any private keys. For a better idea, here is how it works:
 
@@ -24,7 +24,7 @@ The DApp User Interface when running should look like...
 https://github.com/Shadowofneerav/Signing/blob/master/images/UI.PNG
  
 
-Getting Started
+###Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system. Or you can use online ide remix or repl.
 
@@ -55,11 +55,11 @@ https://github.com/Shadowofneerav/Signing/blob/master/images/SmartContractAddres
 
 node index.js
 
-Built With 
+###Built With 
 
 Ethereum - Ethereum is a decentralized platform that runs smart contracts
 
-Acknowledgments
+###Acknowledgments
 
 ⦁	Solidity
 ⦁	Remix
