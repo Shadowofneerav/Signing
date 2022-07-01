@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fair Trade Coffee</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+  <body>
+    <div class="container">
+      <center>
+        <header style="font-size:25px">Initiate a Contract</header>
+        <br>
+        <textarea placeholder="Write your contract here" id="message" style="width: 60%" class="message">
+        </textarea>
+        <br>
+        <br>
+        <input placeholder="Other party's address" id="other-address" style="width: 60%"></input>
+        <br>
+        <br>
+        <button style="width: 60%" id="initiation" onclick="initiate();">Submit to the Blockchain</button>
+      </br>
+      </center>
+        
+      </div>
+    <div class="container">
+      <center>
+        <header style="font-size:25px">Sign a Contract</header>
+        <br>
+        <button style="width: 60%" onclick="previewContract();">View your contract</button>
+        <br>
+        <br>
+        <p style="width: 60%" id="preview-contract"></p>
+          <button style="width: 60%" hidden onclick="cosign();" id="cosignButton">Sign The Contract</p>
+          </br>
+      </center>
+        
+      </div>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/contract.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    
+   
+    <script type="text/javascript">
+      var myContract;
+      //const Web3 = require('web3');
+// web3 lib instance
+//const web3 = new Web3(window.ethereum);
+// get all accounts
+//const accounts = await web3.eth.getAccounts();
+  //    console.log(accounts);
+
+      //const Web3 = require('web3');
+
+/*let web3;
+const ethEnabled = async () => {
+    if (window.ethereum) {      
+      web3 = new Web3(window.ethereum);
+      await window.ethereum.enable();
+    }
+    
+  }
+ethEnabled();*/
+//export default web3;
+CheckMetamaskConnection();  
+async function CheckMetamaskConnection()
+  {
+    if(window.ethereum){
+      window.web3=new Web3(window.ethereum);
+      try{
+        await ethereum.enable();
+        return true;
+      }
+      catch(error)
+      {
+        return false;
+      }
+    }
+    else
+      if(window.web3)
+      {
+        
+        window.web3=new Web3(web3.CurrentProvider);
+        return true;
+      }
+      else
+      {
+        console.log('Non-etheruem browser detected. You should consider trying Metamask!');
+        return false;
+      }
+  }
+async function getCurrentAccount()
+  {
+    
+    const account=await window.web3.eth.getAccounts();
+    console.log(account);
+
+    return account[0];
+  }
+async function initiate()
+  {
+    
+    const account=await getCurrentAccount();
+    console.log(account);
+    var theMessage=document.getElementById("message").value;
+    var recipientAddress=document.getElementById("other-address").value;
+    console.log(theMessage);
+    console.log(recipientAddress);
+    
+     window.myContract=new web3.eth.Contract(SmartContractABI, SmartContractAddress);
+    console.log(window.myContract);
+    await window.myContract.methods.depot(theMessage,recipientAddress).send({from: account});
+  }
+async function previewContract()
+  {
+    const account=await getCurrentAccount();
+    var preview=await window.myContract.methods.isdepot(account).call();
+    console.log(preview);
+    var showHide=document.getElementById("cosignButton");
+    showHide.removeAttribute("hidden");
+  }
+
+async function cosign(){
+  const account=await getCurrentAccount();
+  await window.myContract.methods.signit().send({from: account});
+}
+      </script>
+    <!-- <script 
+  src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js"></script> -->
+    <!--<script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script> -->
+    
+    </body>
+
+</html>
