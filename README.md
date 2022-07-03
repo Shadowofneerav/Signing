@@ -10,9 +10,9 @@ The answer is pretty clear: NO
 
 ### The Idea
 
-Essentially, my project allows you to “sign” contracts without using any private keys. For a better idea, here is how it works:
+Essentially, my project allows you to “sign” contracts without using any private keys. For a better idea, here is how it works:
 
-1. A user goes on the app and “initializes” a contract - writes the contract contents and the recipient's address.
+1. A user goes on the app and “initializes” a contract - writes the contract contents and the recipient's address.
 
 2. The user signs and send the contract to the blockchain.
    
@@ -21,7 +21,7 @@ Essentially, my project allows you to “sign” contracts without using any p
 
 The DApp User Interface when running should look like...
 
- https://github.com/Shadowofneerav/Signing/blob/master/images/UI.PNG
+ ![This is an image](https://github.com/Shadowofneerav/Signing/blob/master/images/UI.PNG)
 
  
 
@@ -40,12 +40,12 @@ git clone
 
 1) ABI in below image
  
-  https://github.com/Shadowofneerav/Signing/blob/master/images/abi.PNG
+  ![This is an image](https://github.com/Shadowofneerav/Signing/blob/master/images/abi.PNG)
 
 
 2) Deployed address in below image.
  
-   https://github.com/Shadowofneerav/Signing/blob/master/images/SmartContractAddress.PNG
+   ![This is an image](https://github.com/Shadowofneerav/Signing/blob/master/images/SmartContractAddress.PNG)
 
 -Copy the deployed address and replace in place of smart contract address inside contract.js file.
 
