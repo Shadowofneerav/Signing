@@ -1,29 +1,29 @@
 ## Sign Contracts on Smart Contracts Without Using Your Private Key
 
-### The problem
+### Current procedure for signing in a Smart Contract
 
-Signing contracts the traditional ways requires trust
-So when we sign a contract the traditional way, how do we know that the other party isn’t going to change up the terms on the contract? And how can we guarantee that the other party will not claim they didn't sign? Do we even want to take that risk?
+Signing of contract is done using the private key of sender and sender's public key is used to verify the signature.
 
-The answer is pretty clear: NO
+### Problem
+
+As sender's private key is used it has security risks.
+
+### The Solution
+
+This project allows you to sign your contract without using private keys. This is how it's work:
+
+* First when the user goes to app. He will see the below image. Where user writes the contract contents and the recipient's address.
+
+![This is an image](https://github.com/Shadowofneerav/Signing/blob/master/images/UI.PNG)
+
+* Once the recipient user or the same user goes to the above image page and click on "View your contract button user will be able to view the "Sign the contract button. The user signs and send the contract to the blockchain.
+
+![This is an image](https://github.com/Shadowofneerav/Signing/blob/master/images/Sign%20the%20contract.PNG)
+
+* The recipient can go to contract, they can either sign or ignore it.
 
 
-### The Idea
-
-Essentially, my project allows you to “sign” contracts without using any private keys. For a better idea, here is how it works:
-
-1. A user goes on the app and “initializes” a contract - writes the contract contents and the recipient's address.
-
-2. The user signs and send the contract to the blockchain.
-   
-3. The recipient goes on the platform and sees the contract that is meant for them, they are given the option to sign (using their public key) or ignore.
-
-
-The DApp User Interface when running should look like...
-
- ![This is an image](https://github.com/Shadowofneerav/Signing/blob/master/images/UI.PNG)
-
- 
+ ## Development Procedure
 
 ### Getting Started
 
