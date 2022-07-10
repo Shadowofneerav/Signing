@@ -1,6 +1,6 @@
 ## Sign Contracts on Smart Contracts Without Using Your Private Key
 
-###Sign a Transaction Overview
+### Sign a Transaction Overview
 
 After creating a transaction there's a few things to consider.
 
