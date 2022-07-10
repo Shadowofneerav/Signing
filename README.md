@@ -4,8 +4,8 @@
 
 After creating a transaction there's a few things to consider.
 
- *How do we know it's valid?
- *Who owns the transaction?
+ * How do we know it's valid?
+ * Who owns the transaction?
  
 We validate transactions and assign ownership using what's known as a digital signature.
 
